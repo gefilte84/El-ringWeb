@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="dashboard.css">
+<script src="https://kit.fontawesome.com/6563f53365.js" crossorigin="anonymous"></script>
+<style>
+  .header, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #648ca6;
+  }
+
+  a:visited {
+    color: white;
+  }
+  a {
+    font-weight: normal;
+}
+a:link {
+  text-decoration: none;
+}
+
+
+</style>
+    <title></title>
+  </head>
+  <body>
+
+    <!-- Script for sidemeny -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script>
+          const menuIconEl = $('.menu-icon');
+          const sidenavEl = $('.sidenav');
+          const sidenavCloseEl = $('.sidenav__close-icon');
+
+          // Add and remove provided class names
+          function toggleClassName(el, className) {
+            if (el.hasClass(className)) {
+              el.removeClass(className);
+            } else {
+              el.addClass(className);
+            }
+          }
+          // Open the side nav on click
+          menuIconEl.on('click', function() {
+            toggleClassName(sidenavEl, 'active');
+          });
+
+          // Close the side nav on click
+          sidenavCloseEl.on('click', function() {
+            toggleClassName(sidenavEl, 'active');
+          });
+          </script>
+
+    <!-- Hovedklassen for dashboardet -->
+    <div class="grid-container">
+      <header class="header">
+        <div class="header__search">Wohoo</div>
+        <div class="header__avatar">Learning</div></header>
+
+      <!-- Hovedklassen for hovedvinduet-->
+    <main class="main">
+
+      <!-- Vinduet øverst
+        <div class="main-header">
+          <div class="main-header__heading">Hello User</div>
+          <div class="main-header__updates">Recent Items</div>
+        </div> -->
+        <!-- Kortene under header. Kurs gjennomført-->
+        <div class="main-overview">
+            <div class="overviewcard">
+              <div class="overviewcard__icon">I dag</div>
+              <div class="overviewcard__info">5</div>
+            </div>
+            <div class="overviewcard">
+              <div class="overviewcard__icon">Denne uken</div>
+              <div class="overviewcard__info">43</div>
+            </div>
+            <div class="overviewcard">
+              <div class="overviewcard__icon">Denne måneden</div>
+              <div class="overviewcard__info">260</div>
+            </div>
+
+          </div>
+          <!--Scoreboard og kommenende hendelser kort-->
+          <div class="main-cards">
+              <div class="card">Scoreboard</div>
+              <div class="card">Kommende hendelser</div>
+          </div>
+
+              </main>
+
+
+              <!--  Footer klassen-->
+      <footer class="footer">
+        <div class="footer__copyright">Wohoo LTM</div>
+        <div class="footer__signature">2020</div></footer>
+
+            <!-- Sidemenu klassen-->
+
+        <aside class="sidenav">
+          <ul class="sidenav__list">
+            <li class="sidenav__list-item"><i class="fa fa-fw fa-home"><a href="dashboard.html">Hjem</a></i></li>
+            <li class="sidenav__list-item"><i class="fas fa-chart-line"></i>Rapport</li>
+            <li class="sidenav__list-item"><i class="fas fa-list-ol"></i>Scoreboard</li>
+            <li class="sidenav__list-item"><i class="fas fa-chalkboard"></i>Kurs</li>
+            <li class="sidenav__list-item"><i class="fas fa-tools"></i>Instillinger</li>
+            <li class="sidenav__list-item"><i class="fas fa-sign-out-alt"></i>Logg ut</li>
+          </ul>
+        </aside>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
